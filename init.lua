@@ -1,37 +1,20 @@
-require "paq" {
-     "savq/paq-nvim";
-     "OmniSharp/omnisharp-vim";
-     "dense-analysis/ale";
-     "prabirshrestha/asyncomplete.vim";
-}
+--Do all this BEFORE package manager stuff so if the package manager breaks, at least the default nvim stuff is working
+-- Setup Lazy, pasted from repo.
 
-local wo = vim.wo
-local g = vim.g
-local opt = vim.opt
-local o = vim.o
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable", -- latest stable release
+    lazypath,
+  })
+end
+vim.opt.rtp:prepend(lazypath)
 
-wo.number = true -- show line numbers
-g.OmniSharp_server_user_net8 = 1
-g.OmniSharp_highlighting = 3 -- update highlights after all text changes?
-opt.wrap = false -- no text wrap
-opt.backup = false -- no backup file
-opt.encoding = "utf-8"
-opt.fileencoding = "utf-8"
-opt.termencoding = "utf-8"
+require("vim-options")
+require("lazy").setup("plugins")
 
--- The following lines set the tab character to use 4 spaces, at least according to stack overflow
-
-o.expandtab = true -- Expand Tab input with spaces
-o.smartindent = true -- syntax aware indentations for newline inserts
-o.tabstop = 4 --number of space characters per tab
-o.shiftwidth = 4 --spaces per indentation level
-
-vim.cmd([[
-	" Deal with unwated white spaces (shown in red)
-	highlight ExtraWhitespace ctermbg=red guibg=red
-	match ExtraWhitespace /\s\+$/
-	autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
-	autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
-	autocmd BufWinLeave * call clearmatches()
-]])
 
