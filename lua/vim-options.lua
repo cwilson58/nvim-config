@@ -21,10 +21,15 @@ o.tabstop = 4 --number of space characters per tab
 o.shiftwidth = 4 --spaces per indentation level
 
 vim.cmd([[
-	" Deal with unwated white spaces (shown in red)
+	" Deal with unwanted white spaces (shown in red)
 	highlight ExtraWhitespace ctermbg=red guibg=red
 	match ExtraWhitespace /\s\+$/
 	autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
 	autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 	autocmd BufWinLeave * call clearmatches()
 ]])
+
+vim.opt.spelllang = 'en_ca'
+vim.opt.spell = true
+vim.opt.spelloptions='camel'
+vim.cmd([[highlight SpellBad ctermfg=009 ctermbg=011 guifg=#ff0000 guibg=#ffff00]])

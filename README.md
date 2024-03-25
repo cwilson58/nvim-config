@@ -12,6 +12,7 @@ The package manager used by this tutorial is Paq, not sure of its advantages and
 6. mason
 7. mason-lspconfig
 8. nvim-lspconfig
+9. markdown-preview
 
 ## Non NVIM software
 1. [Chocolatey](https://chocolatey.org/) (package manager)
