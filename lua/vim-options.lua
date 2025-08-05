@@ -11,7 +11,7 @@ opt.backup = false -- no backup file
 -- Set all encoding to utf-8
 opt.encoding = "utf-8"
 opt.fileencoding = "utf-8"
-opt.termencoding = "utf-8"
+-- opt.termencoding = "utf-8"
 
 -- The following lines set the tab character to use 4 spaces, at least according to stack overflow
 
