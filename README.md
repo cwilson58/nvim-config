@@ -13,6 +13,13 @@ This repo stores just my nvim config now being targeted towards my current profe
 I use `Space` as my leader key currently. It feels right.
 ### Markdown
 `<leader>mp` -> Markdown Preview
+### LSP
+`K` -> Hover menu docs
+`<leader>gd` -> goto definition
+`<leader>fw` -> format and write file
+### Telescope
+`<leader>ff` -> find file
+`<leader>fg` -> fuzzy grep
 
 ## Current nvim plugings
 1. Lazy.nvim (package manager)
