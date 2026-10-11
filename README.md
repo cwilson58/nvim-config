@@ -1,6 +1,7 @@
 # NVIM Config
 
-This repo stores just my nvim config now being targeted towards my current professional goals for web development. This means I am focusing on technology in Vercel.
+This repo stores just my nvim config now being targeted towards my current professional goals for web development. This means I am focusing on technology in the react landscape.
+Since Next.JS seems to be focused on vercel instead of self hosting, this will also include references to TanStack.
 
 ## Future TODO
 
