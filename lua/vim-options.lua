@@ -2,7 +2,6 @@ local wo = vim.wo
 local g = vim.g
 local opt = vim.opt
 local o = vim.o
-local keymap = vim.keymap
 
 g.mapleader = " " -- make the leader key space
 wo.number = true -- show line numbers
@@ -11,7 +10,6 @@ opt.backup = false -- no backup file
 -- Set all encoding to utf-8
 opt.encoding = "utf-8"
 opt.fileencoding = "utf-8"
--- opt.termencoding = "utf-8"
 
 -- The following lines set the tab character to use 4 spaces, at least according to stack overflow
 
@@ -32,4 +30,6 @@ vim.cmd([[
 vim.opt.spelllang = 'en_ca'
 vim.opt.spell = true
 vim.opt.spelloptions='camel'
+vim.opt.termguicolors = true
+
 vim.cmd([[highlight SpellBad ctermfg=009 ctermbg=011 guifg=#ff0000 guibg=#ffff00]])

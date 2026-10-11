@@ -1,7 +1,26 @@
 # NVIM Config
-This is currently following [this](https://www.youtube.com/watch?v=d12RCPgCe4U&t=2949s&ab_channel=David) tutorial for a windows setup on NVIM. I have not tested my config outside of a windows environment.
 
-The package manager used by this tutorial is Paq, not sure of its advantages and disadvantages. Sounds like if I want to the same multi-language setup as I am leaving behind in vscode, I am going to want to use Lazy instead. further research is needed.
+This repo stores just my nvim config now being targeted towards my current professional goals for web development. This means I am focusing on technology in the react landscape.
+Since Next.JS seems to be focused on vercel instead of self hosting, this will also include references to TanStack.
+
+## Future TODO
+
+- [] Yaml help somehow
+- [] K8s, Docker, etc.
+- [] Git without leaving nvim
+- [] Install Scripts
+
+## Keymaps
+I use `Space` as my leader key currently. It feels right.
+### Markdown
+`<leader>mp` -> Markdown Preview
+### LSP
+`K` -> Hover menu docs
+`<leader>gd` -> goto definition
+`<leader>fw` -> format and write file
+### Telescope
+`<leader>ff` -> find file
+`<leader>fg` -> fuzzy grep
 
 ## Current nvim plugings
 1. Lazy.nvim (package manager)
